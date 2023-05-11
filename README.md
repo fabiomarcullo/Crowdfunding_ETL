@@ -10,9 +10,9 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Data Source
 
-1. [Contacts Data Source](https://static.bc-edx.com/data/web/mars_news/index.html)
+1. [Contacts Data Source](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/contacts.xlsx)
 
-2. [Crowdfunding Data Source](https://static.bc-edx.com/data/web/mars_facts/temperature.html)
+2. [Crowdfunding Data Source](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/crowdfunding.xlsx)
 
 ## Project Deliverables
 
@@ -49,5 +49,5 @@ b.
 
 ### Shortcuts
 
-- [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/web-scraping-challenge/blob/main/part_1_mars_news.ipynb)
+- [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
 
