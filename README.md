@@ -16,31 +16,31 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Project Deliverables
 
-### 1. Deliverable 1: Category DataFrame.
+### Deliverable 1: Category DataFrame.
 
 a. 
 
 b. 
 
-### 2. Deliverable 2: Subcategory DataFrame.
+### Deliverable 2: Subcategory DataFrame.
 
 a. 
 
 b. 
 
-### 3. Deliverable 2: Campaign DataFrame.
+### Deliverable 3: Campaign DataFrame.
 
 a. 
 
 b. 
 
-### 4. Deliverable 2: Contacts DataFrame.
+### Deliverable 4: Contacts DataFrame.
 
 a. 
 
 b. 
 
-### 5. Deliverable 2: Crowdfunding Database.
+### Deliverable 5: Crowdfunding Database.
 
 a. 
 
