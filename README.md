@@ -18,6 +18,10 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 - [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
 
+### Output
+
+- [Output 1](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
+
 
 ## Project Deliverables
 
