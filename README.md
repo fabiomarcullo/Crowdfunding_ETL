@@ -14,6 +14,11 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 2. [Crowdfunding Data Source](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/crowdfunding.xlsx)
 
+### Codes
+
+- [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
+
+
 ## Project Deliverables
 
 ### Deliverable 1: Category DataFrame.
@@ -46,8 +51,4 @@ a.
 
 b. 
 
-
-### Shortcuts
-
-- [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
 
