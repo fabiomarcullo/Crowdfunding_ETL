@@ -28,19 +28,19 @@ a.
 
 b. 
 
-### 2. Deliverable 2: Campaign DataFrame.
+### 3. Deliverable 2: Campaign DataFrame.
 
 a. 
 
 b. 
 
-### 2. Deliverable 2: Contacts DataFrame.
+### 4. Deliverable 2: Contacts DataFrame.
 
 a. 
 
 b. 
 
-### 2. Deliverable 2: Crowdfunding Database.
+### 5. Deliverable 2: Crowdfunding Database.
 
 a. 
 
