@@ -20,8 +20,8 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Output
 
-- [Output 1](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
-
+- [Category Data Frame](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/category.csv)
+- [Subcategory Data Frame](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/subcategory.csv)
 
 ## Project Deliverables
 
