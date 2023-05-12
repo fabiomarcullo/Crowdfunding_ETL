@@ -25,7 +25,7 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Project Deliverables
 
-  ### Deliverable 1: Category DataFrame.
+  ### Deliverable 1: Category abd Subcategory DataFrame.
 
  ```python
 
@@ -90,25 +90,19 @@ Although you and your partner will divide the work, it’s essential to collabor
   subcategory_df.to_csv("Resources/subcategory.csv", index=False)
 ```
 
-### Deliverable 2: Subcategory DataFrame.
+### Deliverable 2: Campaign DataFrame.
 
 a. 
 
 b. 
 
-### Deliverable 3: Campaign DataFrame.
+### Deliverable 3: Contacts DataFrame.
 
 a. 
 
 b. 
 
-### Deliverable 4: Contacts DataFrame.
-
-a. 
-
-b. 
-
-### Deliverable 5: Crowdfunding Database.
+### Deliverable 4: Crowdfunding Database.
 
 a. 
 
