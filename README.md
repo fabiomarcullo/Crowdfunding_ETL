@@ -25,11 +25,70 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Project Deliverables
 
-### Deliverable 1: Category DataFrame.
+  ### Deliverable 1: Category DataFrame.
 
-a. 
+ ```python
 
-b. 
+  # Read the data into a Pandas DataFrame
+  crowdfunding_info_df = pd.read_excel('Resources/crowdfunding.xlsx')
+  crowdfunding_info_df.head()
+  
+  # Get a brief summary of the crowdfunding_info DataFrame.
+  crowdfunding_info_df.info()
+  
+  # Get the crowdfunding_info_df columns.
+  crowdfunding_info_df.columns
+
+  # Get the crowdfunding_info_df unique category & sub-category.
+  crowdfunding_category_df = crowdfunding_info_df["category & sub-category"].unique()
+  crowdfunding_category_df
+  
+  # Assign the category and subcategory values to category and subcategory columns.
+  crowdfunding_info_df[["category","subcategory"]] = crowdfunding_info_df["category & sub-category"].str.split('/', n=1, expand=True)
+  crowdfunding_info_df.head(10)
+  
+  # Get the unique categories and subcategories in separate lists.
+
+  categories = crowdfunding_info_df["category"].unique()
+  subcategories = crowdfunding_info_df["subcategory"].unique()
+
+  print(categories)
+  print(subcategories)
+  
+  # Get the number of distinct values in the categories and subcategories lists.
+  print(len(categories))
+  print(len(subcategories))
+  
+  # Use a list comprehension to add "cat" to each category_id. 
+
+  cat_ids = ["cat" + str(cat_id) for cat_id in category_ids]
+
+  # Use a list comprehension to add "subcat" to each subcategory_id.    
+
+  subcat_ids = ["subcat" + str(scat_id) for scat_id in subcategory_ids ]
+    
+  print(cat_ids)
+  print(subcat_ids)
+  
+  # Create a category DataFrame with the category_id array as the category_id and categories list as the category name.
+
+  category_df = pd.DataFrame({
+      "category_id": cat_ids,
+      "category" : categories
+  })
+  
+  # Create a category DataFrame with the subcategory_id array as the subcategory_id and subcategories list as the subcategory name. 
+
+  subcategory_df = pd.DataFrame({
+     "subcategory_id": subcat_ids,
+     "subcategory" : subcategories
+  })
+
+  # Export categories_df and subcategories_df as CSV files.
+  category_df.to_csv("Resources/category.csv", index=False)
+
+  subcategory_df.to_csv("Resources/subcategory.csv", index=False)
+```
 
 ### Deliverable 2: Subcategory DataFrame.
 
