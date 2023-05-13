@@ -30,72 +30,102 @@ Although you and your partner will divide the work, it’s essential to collabor
 
  ```python
 
-  # Read the data into a Pandas DataFrame
-  crowdfunding_info_df = pd.read_excel('Resources/crowdfunding.xlsx')
-  crowdfunding_info_df.head()
+# Read the data into a Pandas DataFrame
+ crowdfunding_info_df = pd.read_excel('Resources/crowdfunding.xlsx')
+ crowdfunding_info_df.head()
   
-  # Get a brief summary of the crowdfunding_info DataFrame.
-  crowdfunding_info_df.info()
+# Get a brief summary of the crowdfunding_info DataFrame.
+ crowdfunding_info_df.info()
   
-  # Get the crowdfunding_info_df columns.
-  crowdfunding_info_df.columns
+# Get the crowdfunding_info_df columns.
+ crowdfunding_info_df.columns
 
-  # Get the crowdfunding_info_df unique category & sub-category.
-  crowdfunding_category_df = crowdfunding_info_df["category & sub-category"].unique()
-  crowdfunding_category_df
+# Get the crowdfunding_info_df unique category & sub-category.
+ crowdfunding_category_df = crowdfunding_info_df["category & sub-category"].unique()
+ crowdfunding_category_df
   
-  # Assign the category and subcategory values to category and subcategory columns.
-  crowdfunding_info_df[["category","subcategory"]] = crowdfunding_info_df["category & sub-category"].str.split('/', n=1, expand=True)
-  crowdfunding_info_df.head(10)
+# Assign the category and subcategory values to category and subcategory columns.
+ crowdfunding_info_df[["category","subcategory"]] = crowdfunding_info_df["category & sub-category"].str.split('/', n=1, expand=True)
+ crowdfunding_info_df.head(10)
   
-  # Get the unique categories and subcategories in separate lists.
+# Get the unique categories and subcategories in separate lists.
+ categories = crowdfunding_info_df["category"].unique()
+ subcategories = crowdfunding_info_df["subcategory"].unique()
 
-  categories = crowdfunding_info_df["category"].unique()
-  subcategories = crowdfunding_info_df["subcategory"].unique()
-
-  print(categories)
-  print(subcategories)
+ print(categories)
+ print(subcategories)
   
-  # Get the number of distinct values in the categories and subcategories lists.
-  print(len(categories))
-  print(len(subcategories))
+# Get the number of distinct values in the categories and subcategories lists.
+ print(len(categories))
+ print(len(subcategories))
   
-  # Use a list comprehension to add "cat" to each category_id. 
+# Use a list comprehension to add "cat" to each category_id. 
+ cat_ids = ["cat" + str(cat_id) for cat_id in category_ids]
 
-  cat_ids = ["cat" + str(cat_id) for cat_id in category_ids]
-
-  # Use a list comprehension to add "subcat" to each subcategory_id.    
-
-  subcat_ids = ["subcat" + str(scat_id) for scat_id in subcategory_ids ]
+# Use a list comprehension to add "subcat" to each subcategory_id.    
+ subcat_ids = ["subcat" + str(scat_id) for scat_id in subcategory_ids ]
     
-  print(cat_ids)
-  print(subcat_ids)
+ print(cat_ids)
+ print(subcat_ids)
   
-  # Create a category DataFrame with the category_id array as the category_id and categories list as the category name.
-
-  category_df = pd.DataFrame({
-      "category_id": cat_ids,
-      "category" : categories
-  })
+# Create a category DataFrame with the category_id array as the category_id and categories list as the category name.
+ category_df = pd.DataFrame({
+     "category_id": cat_ids,
+     "category" : categories
+ })
   
-  # Create a category DataFrame with the subcategory_id array as the subcategory_id and subcategories list as the subcategory name. 
+# Create a category DataFrame with the subcategory_id array as the subcategory_id and subcategories list as the subcategory name. 
+ subcategory_df = pd.DataFrame({
+    "subcategory_id": subcat_ids,
+    "subcategory" : subcategories
+ })
 
-  subcategory_df = pd.DataFrame({
-     "subcategory_id": subcat_ids,
-     "subcategory" : subcategories
-  })
-
-  # Export categories_df and subcategories_df as CSV files.
-  category_df.to_csv("Resources/category.csv", index=False)
-
-  subcategory_df.to_csv("Resources/subcategory.csv", index=False)
+# Export categories_df and subcategories_df as CSV files.
+ category_df.to_csv("Resources/category.csv", index=False)
+ subcategory_df.to_csv("Resources/subcategory.csv", index=False)
 ```
 
 ### Deliverable 2: Campaign DataFrame.
 
-a. 
+```python
+# Create a copy of the crowdfunding_info_df DataFrame name campaign_df. 
+ campaign_df = crowdfunding_info_df.copy()
+ campaign_df.head()
 
-b. 
+# Rename the blurb, launched_at, and deadline columns.
+  campaign_df.rename(columns={'blurb': "description",
+                             'launched_at': "launched_date",
+                              'deadline': "end_date"}, inplace=True)
+  campaign_df.head(5)
+ 
+# Convert the goal and pledged columns to a `float` data type.
+  campaign_df["goal"]  = campaign_df["goal"].astype(float)
+  campaign_df["pledged"]  = campaign_df["pledged"].astype(float)
+
+  campaign_df.head(5)
+ 
+# Check the datatypes
+  campaign_df.info()
+
+# Format the launched_date and end_date columns to datetime format
+  from datetime import datetime as dt
+  campaign_df["launched_date"] = pd.to_datetime(campaign_df["launched_date"], unit='s').dt.strftime('%Y-%m-%d') 
+  campaign_df["end_date"] = pd.to_datetime(campaign_df["end_date"], unit='s').dt.strftime('%Y-%m-%d')
+
+  campaign_df.head()
+
+# Merge the campaign_df with the category_df on the "category" column and 
+# the subcategory_df on the "subcategory" column.
+  campaign_merged_df = campaign_df.merge(category_df, on = "category", how = "left").merge(subcategory_df, on = "subcategory", how = "left")
+  campaign_merged_df.head()
+
+# Drop unwanted columns
+  campaign_cleaned = campaign_merged_df.drop(['staff_pick', 'spotlight', 'category & sub-category','category', 'subcategory'], axis=1)
+  campaign_cleaned.head()
+
+# Export the DataFrame as a CSV file. 
+  campaign_cleaned.to_csv("Resources/campaign.csv", index=False)
+``` 
 
 ### Deliverable 3: Contacts DataFrame.
 
