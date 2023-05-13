@@ -22,6 +22,7 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 - [Category Data Frame](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/category.csv)
 - [Subcategory Data Frame](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/subcategory.csv)
+- [Campaign Data Frame](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/campaign.csv)
 
 ## Project Deliverables
 
