@@ -1,4 +1,4 @@
-# Project 2
+# Project 2 - Fabio Lima & Joseph Arambulo
 
 ## Background
 
