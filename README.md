@@ -132,21 +132,16 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ```python
 # Read the data into a Pandas DataFrame. Use the `header=2` parameter when reading in the data.
-
 contact_info_df = pd.read_excel('Resources/contacts.xlsx', header=2)
 contact_info_df.head()
 
-
 # Importing regex, and creating a working copy of contact_info_df.
-
 import re
 
 contact_info_df_copy = contact_info_df.copy()
 contact_info_df_copy.head()
 
-
 # Removing header, and resetting the index.
-
 working_df = contact_info_df_copy.rename(columns = contact_info_df_copy.iloc[0]).\
 drop(contact_info_df_copy.index[0]).reset_index(drop = True)
 
@@ -154,7 +149,6 @@ working_df.head()
 
 
 # Extracting contact_id, changing its datatype from string to integer, creating a list and appending contact_id into that list, and adding a new "contact_id" column into working dataframe.
-
 contact_id = []
 counter = 0
 
@@ -169,9 +163,7 @@ working_df['contact_id'] = pd.DataFrame(contact_id)
 working_df.head(10)
 # working_df.info() --> to check datatypes of dataframe values
 
-
 # Extracting name from contact_info column, adding it into an empty list, and adding the list into working_df as a new column.
-
 name = []
 counter = 0
 
@@ -185,9 +177,7 @@ for i in working_df['contact_info']:
 working_df['name'] = pd.DataFrame(name)
 working_df.head(10)
 
-
 # Extracting email from contact_info column, adding it into an empty list, and adding the list into working_df as a new column.
-
 email = []
 counter = 0
 
@@ -201,15 +191,11 @@ for i in working_df['contact_info']:
 working_df['email'] = pd.DataFrame(email)
 working_df.head(10)
 
-
 # Create a copy of the contact_info_df with the 'contact_id', 'name', and 'email' columns.
-
 contact_info_df_cln = working_df.drop(columns = ['contact_info'])
 contact_info_df_cln.head(10)
 
-
 # Extracted first and last name from 'name' column, created new columbs for first_name and last_name, dropped 'name' column, and reordered the columns in the dataframe.
-
 first_name = []
 last_name = []
 counter = 0
@@ -229,14 +215,10 @@ contact_info_df_cln.drop(columns = 'name')
 contacts_df_clean = contact_info_df_cln[['contact_id', 'first_name', 'last_name', 'email']]
 contacts_df_clean.head(10)
 
-
 # Check the datatypes one more time before exporting as CSV file.
-
 contacts_df_clean.info()
 
-
 # Export the DataFrame as a CSV file. 
-
 contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
 
 ```
