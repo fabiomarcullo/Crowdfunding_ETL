@@ -234,11 +234,11 @@ contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
 ### Deliverable 5: The data from each table is displayed using a SELECT * statement
 
 <div>
-  <img src="Backup informations/campaign_select_query.png" align="center" width="700" />
+  <img src="Backup informations/campaign_select_query.png" align="center" width="750" />
   <br/>
   <br/>
   <br/>
-  <img src="Backup informations/category_select_query.png" align="center" width="700" />
+  <img src="Backup informations/category_select_query.png" align="center" width="500" />
   <br/>
   <br/>
   <br/>
@@ -246,7 +246,7 @@ contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
   <br/>
   <br/>
   <br/>
-  <img src="Backup informations/subcategory_select_query.png" align="center" width="700" />
+  <img src="Backup informations/subcategory_select_query.png" align="center" width="500" />
   
 </div>
 
