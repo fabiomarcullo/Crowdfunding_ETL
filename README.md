@@ -231,4 +231,7 @@ contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
 ![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/assets/123920059/847b1ba7-361c-42e3-80c6-004527c8f504)
 
 
+### Deliverable 5: The data from each table is displayed using a SELECT * statement
+
+![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/assets/123920059/847b1ba7-361c-42e3-80c6-004527c8f504)
 
