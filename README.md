@@ -14,9 +14,10 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 2. [Crowdfunding Data Source](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/Resources/crowdfunding.xlsx)
 
-## Jupyter Notebook
+## Codes
 
 - [ETL_Mini_Project_FLima_JArambulo](https://github.com/fabiomarcullo/Crowdfunding_ETL/tree/main/ETL_Mini_Project_FLima_JArambulo.ipynb)
+- [Crowdfunding db Schema](https://github.com/fabiomarcullo/Crowdfunding_ETL/blob/main/crowdfunding_db_schema.sql)
 
 ## Output
 
