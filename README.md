@@ -26,7 +26,7 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ## Project Deliverables
 
-  ### Deliverable 1: Category abd Subcategory DataFrame.
+  ### Deliverable 1: Category and Subcategory DataFrame.
 
  ```python
 
