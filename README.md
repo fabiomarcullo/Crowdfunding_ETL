@@ -130,7 +130,7 @@ Although you and your partner will divide the work, it’s essential to collabor
 
 ### Deliverable 3: Contacts DataFrame.
 
-```
+```python
 # Read the data into a Pandas DataFrame. Use the `header=2` parameter when reading in the data.
 
 contact_info_df = pd.read_excel('Resources/contacts.xlsx', header=2)
@@ -242,6 +242,9 @@ contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
 ```
 
 ### Deliverable 4: Crowdfunding Database.
+
+![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/assets/123920059/d519c907-2a70-4c4c-9e0d-01a9395b5c72)
+
 
 ![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/assets/123920059/847b1ba7-361c-42e3-80c6-004527c8f504)
 
