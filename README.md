@@ -233,12 +233,20 @@ contacts_df_clean.to_csv("Resources/contacts.csv", encoding='utf8', index=False)
 
 ### Deliverable 5: The data from each table is displayed using a SELECT * statement
 
-![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/blob/main/Backup%20informations/category_select_query.png)
-
-![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/blob/main/Backup%20informations/subcategory_select_query.png)
-
-![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/blob/main/Backup%20informations/contacts_select_query.png)
-
-![image](https://github.com/fabiomarcullo/Crowdfunding_ETL/blob/main/Backup%20informations/campaign_select_query.png)
-
+<div>
+  <img src="Backup informations/campaign_select_query.png" align="right" width="650" />
+  <br/>
+  <br/>
+  <br/>
+  <img src="Backup informations/category_select_query.png" align="right" width="300" />
+  <br/>
+  <br/>
+  <br/>
+  <img src="Backup informations/contacts_select_query.png" align="right" width="600" />
+  <br/>
+  <br/>
+  <br/>
+  <img src="Backup informations/subcategory_select_query.png" align="right" width="300" />
+  
+</div>
 
